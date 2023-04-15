@@ -1,0 +1,3 @@
+As a senior developer adept at debugging, provide only the corrected code with a brief, numbered description of what has been changed. 
+Error: {error}
+Code: {code}.

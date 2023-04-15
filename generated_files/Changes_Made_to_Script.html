@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Changes Made to Script</title>
+        <style>
+            h2 {font-size: 22px;}
+        h1, h2 {margin-bottom: 10px;}
+        /*span {display: block;}   Adds large margins inbetween each line of code*/
+        .key-item span {margin-left: 8px;}
+        .key-item:last-child {margin-right: 0;}
+        .clear {clear: both;}
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #303030;
+            /*line-height: 1;*/
+            color: #333;
+            margin: 20px;
+        }
+        h1 {
+            font-size: 28px;
+            background-color: #e0e0e0;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            margin-top: 0;
+        }
+        pre, code {
+            font-family: 'Courier New', monospace;
+            font-size: 15px;
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        pre {
+            margin-bottom: 20px;
+            overflow-x: auto;
+            max-width: 100%;
+        }
+        code {
+            display: block;
+            white-space: pre-wrap;
+        }
+        .key-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+        .key-item {
+            display: inline-flex;
+            align-items: center;
+            background-color: #e0e0e0;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 18px;
+        }
+        .legend-container {
+            display: inline-block;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 20px;
+            background-color: #606060;
+        }
+        .key-container {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .key-item {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 12px;
+            font-size: 18px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #CCCCCC;
+            margin-right: 10px;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="legend-container">
+            <h3 style="color: #FAF9F6;">Legend</h3>
+            <div class="key-container">
+                <div class="key-item" style="color: red;">- Line of Code Removed</div>
+                <div class="key-item" style="color: green;">+ Line of Code Added</div>
+                <div class="key-item" style="color: black;">? Line Differences Were Made</div>
+                <div class="key-item" style="color: black;">Unchanged</div>
+            </div>
+        </div>
+        <div class="clear">
+            <h1 style="color: black; clear: both;">Changes made to code by GPT</h1>
+            <pre><code><span style="color:black;">from pathlib import Path</span><br><span style="color:green;">+ 1. Fixed indentation for read_file function.</span><br><span style="color:green;">+ 2. Corrected typo in return statement for read_file function.</span><br><span style="color:green;">+ 3. Added try-except block to handle ZeroDivisionError in divide_filesize_by_nine function.</span><br><span style="color:green;">+ 4. Removed add_numbers function as it is not defined in the code given.</span><br><span style="color:red;">- def read_file(              file):</span><br><span style="color:green;">+ </span><br><span style="color:green;">+ def read_file(file):</span><br><span style="color:red;">-     with open(file, &#x27;r&#x27;             ) as f:</span><br><span style="color:green;">+     with open(file, &#x27;r&#x27;) as f:</span><br><span style="color:red;">-         content = f.read(</span><br><span style="color:green;">+         content = f.read()</span><br><span style="color:red;">-             </span><br><span style="color:red;">-             </span><br><span style="color:red;">-         )</span><br><span style="color:red;">-     return contemt</span><br><span style="color:green;">+     return content</span><br><span style="color:green;">+ </span><br><span style="color:black;">  def check_file_exists(file):</span><br><span style="color:black;">      return Path(file).exists()</span><br><span style="color:green;">+ </span><br><span style="color:black;">  def divide_filesize_by_nine(file):</span><br><span style="color:green;">+     try:</span><br><span style="color:green;">+         return len(file) / 9</span><br><span style="color:green;">+     except ZeroDivisionError:</span><br><span style="color:red;">-     return \</span><br><span style="color:green;">+         return 0</span><br><span style="color:red;">-         len(file)/0</span><br><span style="color:green;">+ </span><br><span style="color:black;">  file = &quot;some_file.txt&quot;</span><br><span style="color:green;">+ print(check_file_exists(file))</span><br><span style="color:red;">- print(</span><br><span style="color:red;">-     </span><br><span style="color:red;">-     </span><br><span style="color:red;">-     check_file_exists(file                              ))</span><br><span style="color:red;">- print(divide_filesize_by_nine(          file    </span><br><span style="color:green;">+ print(divide_filesize_by_nine(file))</span><br><span style="color:red;">-                               </span><br><span style="color:red;">-                               ))</span><br><span style="color:red;">- print(read_file(file            ))</span><br><span style="color:green;">+ print(read_file(file))</span><br><span style="color:red;">- print(add_numbers(3, 4))</span><br></code></pre>
+        </div>
+        <h1 style="color: red;">Original Code</h1>
+        <pre><code>from pathlib import Path
+
+def read_file(              file):
+    with open(file, 'r'             ) as f:
+        content = f.read(
+            
+            
+        )
+    return contemt
+
+def check_file_exists(file):
+    return Path(file).exists()
+
+def divide_filesize_by_nine(file):
+    return \
+        len(file)/0
+
+file = "some_file.txt"
+print(
+    
+    
+    check_file_exists(file                              ))
+print(divide_filesize_by_nine(          file    
+                              
+                              ))
+print(read_file(file            ))
+print(add_numbers(3, 4))</code></pre>
+        <h1 style="color: green;">GPT Suggest Code. Formatted to PEP8 Standards.</h1>
+        <pre><code>from pathlib import Path
+1. Fixed indentation for read_file function.
+2. Corrected typo in return statement for read_file function.
+3. Added try-except block to handle ZeroDivisionError in divide_filesize_by_nine function.
+4. Removed add_numbers function as it is not defined in the code given.
+
+
+def read_file(file):
+    with open(file, 'r') as f:
+        content = f.read()
+    return content
+
+
+def check_file_exists(file):
+    return Path(file).exists()
+
+
+def divide_filesize_by_nine(file):
+    try:
+        return len(file) / 9
+    except ZeroDivisionError:
+        return 0
+
+
+file = "some_file.txt"
+print(check_file_exists(file))
+print(divide_filesize_by_nine(file))
+print(read_file(file))
+</code></pre>
+    </body>
+</html>

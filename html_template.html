@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Changes Made to Script</title>
+        <style>
+            h2 {{font-size: 22px;}}
+        h1, h2 {{margin-bottom: 10px;}}
+        /*span {{display: block;}}   Adds large margins inbetween each line of code*/
+        .key-item span {{margin-left: 8px;}}
+        .key-item:last-child {{margin-right: 0;}}
+        .clear {{clear: both;}}
+        body {{
+            font-family: Arial, sans-serif;
+            background-color: #303030;
+            /*line-height: 1;*/
+            color: #333;
+            margin: 20px;
+        }}
+        h1 {{
+            font-size: 28px;
+            background-color: #e0e0e0;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }}
+        h3 {{
+            font-size: 24px;
+            margin-bottom: 10px;
+            margin-top: 0;
+        }}
+        pre, code {{
+            font-family: 'Courier New', monospace;
+            font-size: 15px;
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }}
+        pre {{
+            margin-bottom: 20px;
+            overflow-x: auto;
+            max-width: 100%;
+        }}
+        code {{
+            display: block;
+            white-space: pre-wrap;
+        }}
+        .key-container {{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }}
+        .key-item {{
+            display: inline-flex;
+            align-items: center;
+            background-color: #e0e0e0;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 18px;
+        }}
+        .legend-container {{
+            display: inline-block;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 20px;
+            background-color: #606060;
+        }}
+        .key-container {{
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }}
+        .key-item {{
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 12px;
+            font-size: 18px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #CCCCCC;
+            margin-right: 10px;
+        }}
+    </style>
+    </head>
+    <body>
+        <div class="legend-container">
+            <h3 style="color: #FAF9F6;">Legend</h3>
+            <div class="key-container">
+                <div class="key-item" style="color: red;">- Line of Code Removed</div>
+                <div class="key-item" style="color: green;">+ Line of Code Added</div>
+                <div class="key-item" style="color: black;">? Line Differences Were Made</div>
+                <div class="key-item" style="color: black;">Unchanged</div>
+            </div>
+        </div>
+        <div class="clear">
+            <h1 style="color: black; clear: both;">Changes made to code by GPT</h1>
+            <pre><code>{differences}</code></pre>
+        </div>
+        <h1 style="color: red;">Original Code</h1>
+        <pre><code>{orig_script}</code></pre>
+        <h1 style="color: green;">GPT Suggest Code. Formatted to PEP8 Standards.</h1>
+        <pre><code>{modified_script}</code></pre>
+    </body>
+</html>

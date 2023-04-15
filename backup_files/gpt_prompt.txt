@@ -1,0 +1,3 @@
+As a senior developer adept at debugging, provide only the corrected code with a brief, numbered description of the fix only if the fix is convoluted. 
+Error: {error}
+Code: {code}.
